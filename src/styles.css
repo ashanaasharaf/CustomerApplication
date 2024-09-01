@@ -2,11 +2,107 @@
 
 html,
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
     height: 100%;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: #333;
+    overflow-x: hidden;
 }
 
+/* Container styling */
+.example-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+.mat-table {
+    min-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mat-header-row,
+.mat-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.mat-header-cell,
+.mat-cell {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    white-space: nowrap;
+    font-size: 18px;
+
+}
+
+.mat-header-cell {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+
+    .mat-header-cell,
+    .mat-cell {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Stack columns vertically for smaller screens */
+    .mat-header-row,
+    .mat-row {
+        display: block;
+    }
+
+    .mat-header-cell,
+    .mat-cell {
+        display: block;
+        width: 100%;
+    }
+
+    .mat-header-cell {
+        border-bottom: none;
+        background-color: transparent;
+        font-weight: normal;
+    }
+
+    .mat-cell {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 10px;
+        min-width: 200px;
+    }
+
+    .mat-cell:before {
+        content: attr(data-label);
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .mat-header-cell,
+    .mat-cell {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
