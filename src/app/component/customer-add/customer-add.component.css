@@ -1,7 +1,33 @@
-.basicDetailButton{
+.root-container {
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 auto;
+    background: #f2f4f7;
+}
+
+.basicDetailTitle {
+    padding-bottom: 10px;
+    color: plum;
+}
+
+.basicDetails {
+    display: flex;
+    column-gap: 10px;
+}
+
+.basicData {
+    width: 100%;
+}
+
+.buttonValue {
+    width: 300px;
+    margin: auto;
+}
+
+.basicDetailButton {
     margin: 0px 0px 0px 10px;
     align-items: center;
-    color:white;
-    width:80%;
-    background-color: blueviolet; 
+    color: white;
+    width: 80%;
+    background-color: blueviolet;
 }

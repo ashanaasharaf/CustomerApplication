@@ -1,5 +1,8 @@
 .mat-table {
     width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .mat-cell div {
@@ -13,7 +16,10 @@
 
 @media (max-width: 600px) {
     .mat-table {
-        font-size: 0.75rem;
+        font-size: 10px;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .mat-header-cell,

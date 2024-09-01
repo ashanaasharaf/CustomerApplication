@@ -1,18 +1,34 @@
 .mat-toolbar {
-  
   background-color: cornflowerblue;
   color: white;
   display: flex;
   justify-content: space-between;
 }
 
-.mat-button {
+.mat-toolbar a {
   color: white;
 }
 
+.spacer {
+  flex: 1 1 auto;
+}
 
-@media (max-width: 400px) {
- .mat-toolbar{
-  width: 100%;
- }
+@media (min-width: 601px) {
+  .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .mat-toolbar {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .spacer {
+    display: none;
+  }
 }
