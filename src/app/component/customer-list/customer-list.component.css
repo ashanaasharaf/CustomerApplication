@@ -1,0 +1,23 @@
+.mat-table {
+    width: 100%;
+}
+
+.mat-cell div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-cell div strong {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .mat-table {
+        font-size: 0.75rem;
+    }
+
+    .mat-header-cell,
+    .mat-cell {
+        padding: 8px;
+    }
+}

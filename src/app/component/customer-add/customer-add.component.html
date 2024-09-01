@@ -1,0 +1,128 @@
+<mat-card class="root-container">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <mat-card style="margin-bottom: 20px;">
+      <mat-card-header>
+        <mat-card-title class="basicDetailTitle">Basic Info</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="basicDetails">
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Name" formControlName="name" matInput />
+            <mat-error
+              *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">Please
+              provide a name.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="UserName" formControlName="username" matInput />
+            <mat-error
+              *ngIf="myForm.get('username').invalid && (myForm.get('username').dirty || myForm.get('username').touched)">Please
+              provide a username.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Email" formControlName="email" matInput />
+            <mat-error
+              *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty || myForm.get('email').touched)">Please
+              provide a email.</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="basicDetails">
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Phone" formControlName="phone" matInput />
+            <mat-error
+              *ngIf="myForm.get('phone').invalid && (myForm.get('phone').dirty || myForm.get('phone').touched)">Please
+              provide a phone.</mat-error>
+          </mat-form-field>
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Website" formControlName="website" matInput />
+            <mat-error
+              *ngIf="myForm.get('website').invalid && (myForm.get('website').dirty || myForm.get('website').touched)">Please
+              provide a website.</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card style="margin-bottom: 20px;" formGroupName="address">
+      <mat-card-header>
+        <mat-card-title class="basicDetailTitle">Address Info</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="basicDetails">
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Street" formControlName="street" matInput />
+            <mat-error
+              *ngIf="myForm.get('address').get('street').invalid && (myForm.get('address').get('street').dirty || myForm.get('address').get('street').touched)">Please
+              provide a street.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="suit" formControlName="suite" matInput />
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="City" formControlName="city" matInput />
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Zipcode" formControlName="zip" matInput />
+          </mat-form-field>
+        </div>
+        <div class="basicDetails" formGroupName="geo">
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Latitude" formControlName="lat" matInput />
+            <mat-error
+              *ngIf="myForm.get('address').get('geo').get('lat').invalid && (myForm.get('address').get('geo').get('lat').dirty || myForm.get('address').get('geo').get('lat').touched)">Please
+              provide a latitude.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Longitude" formControlName="lng" matInput />
+            <mat-error
+              *ngIf="myForm.get('address').get('geo').get('lng').invalid && (myForm.get('address').get('geo').get('lng').dirty || myForm.get('address').get('geo').get('lng').touched)">Please
+              provide a longitude.</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="basicDetailTitle">Company Info</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="basicDetails" formGroupName="company">
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Company Name" formControlName="name" matInput />
+            <mat-error
+              *ngIf="myForm.get('company').get('name').invalid && (myForm.get('company').get('name').dirty || myForm.get('company').get('name').touched)">Please
+              provide a company name.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Bs" formControlName="bs" matInput />
+            <mat-error
+              *ngIf="myForm.get('company').get('bs').invalid && (myForm.get('company').get('bs').dirty || myForm.get('company').get('bs').touched)">Please
+              provide a bs.</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="basicData" appearance="outline">
+            <input type="text" placeholder="Catch Phrase" formControlName="catchPhrase" matInput />
+            <mat-error
+              *ngIf="myForm.get('company').get('catchPhrase').invalid && (myForm.get('company').get('catchPhrase').dirty || myForm.get('company').get('catchPhrase').touched)">Please
+              provide a catch phase.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="buttonValue">
+          <button mat-raised-button color="primary" type="submit" class="basicDetailButton">
+            Add Customer
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</mat-card>

@@ -1,0 +1,18 @@
+.mat-toolbar {
+  
+  background-color: cornflowerblue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mat-button {
+  color: white;
+}
+
+
+@media (max-width: 400px) {
+ .mat-toolbar{
+  width: 100%;
+ }
+}
